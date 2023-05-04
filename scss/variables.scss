@@ -1,0 +1,16 @@
+/*Variables*/
+$font-family: "Raleway", sans-serif;
+$main-color:white;
+/*Mixin*/
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
+@mixin mobile-mediaqueries{
+    @media screen and (min-width: 0px) and (max-width: 768px){
+        @content;
+    }
+}
+$map-flex:(
+    align-items: center
+)

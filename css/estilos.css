@@ -237,6 +237,7 @@ body {
   justify-content: center;
   width: 50%;
   height: 60%;
+  align-items: center;
   margin: auto;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(0, 0, 0);
@@ -262,6 +263,7 @@ body {
   display: flex;
   font-size: 3rem;
   padding: 2rem;
+  align-items: center;
   justify-content: space-around;
   text-decoration: underline;
   color: white;
@@ -411,6 +413,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -514,17 +517,6 @@ input[type=submit]:hover {
 
 /*Variables*/
 /*Mixin*/
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .colorFooter {
   height: auto;
   text-align: center;
@@ -532,9 +524,6 @@ input[type=submit]:hover {
 
 .footer__icono {
   text-decoration: none;
-}
-.footer__icono .icon {
-  animation: float infinite 4s ease-in-out;
 }
 
 .mail {
@@ -544,7 +533,7 @@ input[type=submit]:hover {
 
 .fa-brands {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 1.5rem;
 }
 
@@ -558,4 +547,4 @@ input[type=submit]:hover {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=estilos.css.map */

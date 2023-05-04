@@ -1,0 +1,38 @@
+@import"variables";
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-25px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.colorFooter {
+    height: auto;
+    text-align: center;
+  }
+  
+  .footer__icono {
+    text-decoration: none;
+      .icon{
+        animation: float infinite 4s ease-in-out;
+      }
+  }
+  
+  .mail {
+    text-decoration: none;
+    color: $main-color;
+  }
+  
+  .fa-brands {
+    color: $main-color;
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  
+  .iframe {
+    margin-left: 10rem;
+  }

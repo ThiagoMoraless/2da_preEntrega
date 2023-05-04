@@ -1,0 +1,12 @@
+@import "variables";
+body {
+    font-family: $font-family;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/img/fondodelmain.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
