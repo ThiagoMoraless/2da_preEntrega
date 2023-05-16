@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 /*Variables*/
 /*Mixin*/
+/*Variables*/
+/*Mixin*/
 body {
   font-family: "Raleway", sans-serif;
   height: auto;
@@ -33,14 +35,13 @@ body {
 .header__nav__ul li {
   margin: 0.5rem;
 }
-
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .navbar-toggler {
+  .header .navbar-toggler {
     margin-left: 2rem;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .navbar-toggler-icon {
+  .header .navbar-toggler-icon {
     color: white;
   }
 }
@@ -109,6 +110,7 @@ body {
   margin-top: 15px;
   margin-bottom: 50px;
   margin: 10px;
+  /*Hasta acá llega mi configuración de las imàgenes de mi página de inicio*/
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .sectionCards__card1 {
@@ -128,7 +130,6 @@ body {
   }
 }
 
-/*Hasta acá llega mi configuración de las imàgenes de mi página de inicio*/
 .main_divTitulo {
   text-align: center;
   text-decoration: underline;
@@ -400,6 +401,16 @@ body {
   height: 18rem;
 }
 
+.main__h1 {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.main__h1 h1 {
+  color: white;
+}
+
 .main__form {
   width: 600px;
   margin: 0 auto;
@@ -454,7 +465,6 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/*Acá empieza mis media queries del main */
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .main__centrar__tituloPrincipal {
     font-size: 30px;
@@ -492,7 +502,9 @@ input[type=submit]:hover {
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  input[type=text], input[type=email], textarea {
+  input[type=text],
+  input[type=email],
+  textarea {
     width: 84%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -525,30 +537,26 @@ input[type=submit]:hover {
     transform: translateY(0);
   }
 }
-.colorFooter {
+.footer {
   height: auto;
   text-align: center;
 }
-
-.footer__icono {
+.footer .footer__icono {
   text-decoration: none;
 }
-.footer__icono .icon {
+.footer .footer__icono .icon {
   animation: float infinite 4s ease-in-out;
 }
-
-.mail {
+.footer .mail {
   text-decoration: none;
   color: white;
 }
-
-.fa-brands {
+.footer .fa-brands {
   color: white;
   font-size: 3rem;
   padding: 1.5rem;
 }
-
-.iframe {
+.footer .iframe {
   margin-left: 10rem;
 }
 
@@ -558,4 +566,4 @@ input[type=submit]:hover {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=estilos.css.map */
