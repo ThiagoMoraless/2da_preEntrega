@@ -405,10 +405,14 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-decoration: underline;
+  margin-bottom: 2rem;
 }
-.main__h1 h1 {
-  color: white;
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .main__h1 {
+    font-size: 2rem;
+  }
 }
 
 .main__form {
@@ -450,6 +454,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   height: 150px;
+  color: black;
 }
 
 input[type=submit] {

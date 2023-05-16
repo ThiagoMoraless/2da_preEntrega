@@ -351,10 +351,11 @@
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 2rem;
-
-    & h1 {
-        color: white;
+    font-size: 3rem;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    @include mobile-mediaqueries{
+        font-size: 2rem;
     }
 }
 
@@ -397,6 +398,7 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     height: 150px;
+    color: black;
 }
 
 input[type=submit] {
