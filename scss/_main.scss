@@ -1,403 +1,470 @@
 @import "variables";
+
 .mainVh {
-    display: flex;
-}
+    display: $flex;
 
-.body__divGrid {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% auto 15%;
-}
-
-.main__introduccion {
-    background-color: rgba(14, 13, 13, 0.231372549);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(1px);
-    padding: 50px;
-    text-align: center;
-    font-size: 40px;
-    margin-top: 20px;
-    color: $main-color;
-    @include mobile-mediaqueries{
-        font-size: 18px;
+    .body__divGrid {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% auto 15%;
     }
-}
 
-.main__centrar {
-    text-align: center;
-    width: 100%;
-
-    &__tituloPrincipal {
-        font-size: 4rem;
-        text-decoration: underline;
-        margin-block-end: revert;
-        margin-block-start: revert;
-        color: $main-color ;
-    }
-}
-
-/*Acá empieza la configuración de las imágenes de mi pàgina de inicio*/
-.sectionCards {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-
-    & .titulo {
-        font-size: 4rem;
+    .main__introduccion {
+        background-color: rgba(14, 13, 13, 0.231372549);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(1px);
+        padding: 50px;
+        text-align: $center;
+        font-size: 40px;
         margin-top: 20px;
-        text-decoration: underline;
-        color: rgb(0, 0, 0);
-    }
-}
-
-.sectionCards__card1 {
-    width: 30%;
-    display: inline-block;
-    box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
-    -webkit-box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
-    -moz-box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
-    background-color: rgba(255, 255, 255, 0.877);
-    margin-top: 15px;
-    margin-bottom: 50px;
-    margin: 10px;
-    @include mobile-mediaqueries{
-        width: 400px;
-        height: 400px;
-    }
-    & img {
-        width: 100%;
-        height: 55vh;
-        object-fit: cover;
-        @include mobile-mediaqueries{
-            width: 350px;
-            height: 350px;
-        }
-    }
-
-}
-/*Hasta acá llega mi configuración de las imàgenes de mi página de inicio*/
-.main_divTitulo {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 2rem;
-    @include mobile-mediaqueries{
-        font-size: 25px;
-    }
-}
-.main__divContenedor {
-    display: flex;
-    flex-direction: row;
-    &__h2 {
-        margin-left: 6rem;
-        font-size: 2rem;
-        text-decoration: underline;
         color: $main-color;
-        white-space: nowrap;
-    }
-    &__iframe {
-        margin-top: 2rem;
-        margin-left: 9rem;
-        margin-bottom: 3rem;
-        border: 2px solid $main-color;
-    }
-}
-.main__div__h2Argentina {
-    text-decoration: underline;
-    margin-left: 33rem;
-    font-size: 3rem;
-    color: $main-color;
-    @include mobile-mediaqueries{
-        font-size: 20px;
-        margin-left: 8rem;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-}
-.main__div__listaOrdenada {
-    font-family: "Oswald", sans-serif;
-    text-decoration: none;
-    margin-top: 2rem;
-    font-size: 2.6rem;
-    list-style-type: none;
-    justify-content: end;
-    margin-left: 22rem;
-    color: $main-color;
-    @include mobile-mediaqueries{
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-left: 1.5rem;
-        margin-bottom: 2rem;
-    }
-}
-.main__div__h1 h1 {
-    color: $main-color;
-    @include flex-center;
-    text-decoration: underline;
-    & h1 {
-        font-size: 3rem;
-    }
-    @include mobile-mediaqueries{
-        font-size: 2rem;
-    }
-}
-.card-group {
-    margin-bottom: 2rem;
-}
-.card-text {
-    text-align: center;
-}
-.main__div__h2 h2{
-    color: $main-color;
-    @include flex-center;
-    text-decoration: underline;
-    & h2 {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
-    @include mobile-mediaqueries{
-        font-size: 1.3rem;
-    }
-}
-.contenedorCarrusel {
-    background-color: $main-color;
-    @include flex-center;
-    width: 50%;
-    height: 60%;
-    align-items: map-get($map-flex, center );
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px rgb(0, 0, 0);
-}
-.main__divParrafo{
-background-color: rgba(14, 13, 13, 0.231372549);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(1px);
-padding: 50px;
-text-align: center;
-font-size: 40px;
-margin-top: 20px;
-color: $main-color;
-@include mobile-mediaqueries{
-    font-size: 22px;
-}
-}
-.main__divCentrar h1{
-    display: flex;
-    font-size: 3rem;
-    padding: 2rem;
-    align-items: map-get($map-flex, center );
-    justify-content: space-around;
-    text-decoration: underline;
-    color: $main-color;
-    @include mobile-mediaqueries{
-        font-size: 20px;
-    }
-}
-.imagen {
-    border: 2px solid black;
-    text-align: center;
-    background-color: $main-color;
-    justify-content: center;
-    & img {
-        width: 580px;
-        height: 580px;
-        padding: 1rem;
-    }
-}
-.main__divTexto {
-    color: $main-color;
-    width: 50%;
-    text-align: center;
-    @include flex-center;
-    margin-left: 25%;
-    font-size: 2rem;
-    @include mobile-mediaqueries{
-        font-size: 1rem;
-    }
-}
-.main__divModelos h2 {
-    color: $main-color;
-    text-align: center;
-    font-size: 3rem;
-    text-decoration: underline;
-    margin-top: 2rem;
-    @include mobile-mediaqueries{
-        font-size: 2rem;
-    }
-}
 
-.main__divContenedorModelos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    justify-content: space-around;
-    color: $main-color;
-    margin-bottom: 2rem;
-    & h4 {
-        color: black;
-    }
-}
-.main__divContenedorModelosCard4 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.877);
-    @include mobile-mediaqueries{
-        width: 90%;
-    }
-    & img {
-        width: 35rem;
-        height: 35rem;
-        object-fit: cover;
-        @include mobile-mediaqueries{
-            width: 85%;
+        @include mobile-mediaqueries {
+            font-size: 18px;
         }
-    }
-}
-.main__divContenedorModelosCard5 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.877);
-    @include mobile-mediaqueries{
-        width: 90%;
-    }
-    & img {
-        width: 35rem;
-        height: 35rem;
-        object-fit: cover;
-        @include mobile-mediaqueries{
-            width: 85%;
+
+        .main__centrar {
+            text-align: $center;
+            width: 100%;
+
+            &__tituloPrincipal {
+                font-size: 4rem;
+                text-decoration: underline;
+                margin-block-end: revert;
+                margin-block-start: revert;
+                color: $main-color ;
+            }
         }
-    }
-    
-}
-.main__divContenedorModelosCard6 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.877);
-    @include mobile-mediaqueries{
-        width: 90%;
-    }
-    & img {
-        width: 35rem;
-        height: 35rem;
-        object-fit: cover;
-        @include mobile-mediaqueries{
-            width: 85%;
+
+        /*Acá empieza la configuración de las imágenes de mi pàgina de inicio*/
+        .sectionCards {
+            text-align: $center;
+            width: 90%;
+            margin: 0 auto;
+
+            & .titulo {
+                font-size: 4rem;
+                margin-top: 20px;
+                text-decoration: underline;
+                color: rgb(0, 0, 0);
+            }
         }
-    }
-}
-.ubicacionImagen {
-    border-top: 1px solid black;
-    padding: 1rem 1rem 1rem 1rem;
-    & img {
-        margin-right: 18rem;
-        margin-left: 22rem;
-        border: 1rem solid rgba(150, 7, 7, 0.356);
-        width: 18rem;
-        height: 18rem;
-    }
-}
-.main__form {
-    width: 600px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    @include mobile-mediaqueries{
-        width: 30rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: map-get($map-flex, center );
-    }
-}
 
-label,
-input,
-textarea {
-    display: block;
-    margin-bottom: 10px;
-    color: $main-color;
-}
+        .sectionCards__card1 {
+            width: 30%;
+            display: inline-block;
+            box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
+            -webkit-box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
+            -moz-box-shadow: 16px 14px 31px 20px rgba(0, 0, 0, 0.74);
+            background-color: rgba(255, 255, 255, 0.877);
+            margin-top: 15px;
+            margin-bottom: 50px;
+            margin: 10px;
 
-input[type=text],
-input[type=email]
-{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: black;
-}
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 150px;
-}
-input[type=submit] {
-    background-color: #4CAF50;
-    color: $main-color;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-/*Acá empieza mis media queries del main */
-  .main__centrar__tituloPrincipal {
-    @include mobile-mediaqueries{
-        font-size: 30px;
-        text-align: center;
-    }
-  }
+            @include mobile-mediaqueries {
+                width: 400px;
+                height: 400px;
+            }
 
-  .main__divContenedor__h2 {
-    @include mobile-mediaqueries{
-        font-size: 20px;
-        justify-content: center;
-        margin-left: 1.4rem;
-    }
-  }
-  .main__divContenedor {
-    @include mobile-mediaqueries{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-  }
-  .main__divContenedor__iframe {
-    @include mobile-mediaqueries{
-        width: 400px;
-        height: 400px;
-        margin-left: 3rem;
-    }
-  }
-  .contenedorCarrusel {
-    @include mobile-mediaqueries{
-        width: 90%;
-    }
-  }
-  input[type=text], input[type=email], textarea {
-    @include mobile-mediaqueries{
-        width: 84%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-  }
-  textarea {
-    @include mobile-mediaqueries{
-        width: 84%;
-        padding: 0px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        height: 150px;
+            & img {
+                width: 100%;
+                height: 55vh;
+                object-fit: cover;
+
+                @include mobile-mediaqueries {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+
+            /*Hasta acá llega mi configuración de las imàgenes de mi página de inicio*/
+            .main_divTitulo {
+                text-align: $center;
+                text-decoration: underline;
+                font-size: 2rem;
+
+                @include mobile-mediaqueries {
+                    font-size: 25px;
+                }
+            }
+
+            .main__divContenedor {
+                display: $flex;
+                flex-direction: row;
+
+                &__h2 {
+                    margin-left: 6rem;
+                    font-size: 2rem;
+                    text-decoration: underline;
+                    color: $main-color;
+                    white-space: nowrap;
+                }
+
+                &__iframe {
+                    margin-top: 2rem;
+                    margin-left: 9rem;
+                    margin-bottom: 3rem;
+                    border: 2px solid $main-color;
+                }
+            }
+
+            .main__div__h2Argentina {
+                text-decoration: underline;
+                margin-left: 33rem;
+                font-size: 3rem;
+                color: $main-color;
+
+                @include mobile-mediaqueries {
+                    font-size: 20px;
+                    margin-left: 8rem;
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .main__div__listaOrdenada {
+                font-family: "Oswald", sans-serif;
+                text-decoration: none;
+                margin-top: 2rem;
+                font-size: 2.6rem;
+                list-style-type: none;
+                justify-content: end;
+                margin-left: 22rem;
+                color: $main-color;
+
+                @include mobile-mediaqueries {
+                    justify-content: $center;
+                    font-size: 1.5rem;
+                    margin-left: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .main__div__h1 h1 {
+                color: $main-color;
+                @include flex-center;
+                text-decoration: underline;
+
+                & h1 {
+                    font-size: 3rem;
+                }
+
+                @include mobile-mediaqueries {
+                    font-size: 2rem;
+                }
+            }
+
+            .card-group {
+                margin-bottom: 2rem;
+            }
+
+            .card-text {
+                text-align: $center;
+            }
+
+            .main__div__h2 h2 {
+                color: $main-color;
+                @include flex-center;
+                text-decoration: underline;
+
+                & h2 {
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                }
+
+                @include mobile-mediaqueries {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .contenedorCarrusel {
+                background-color: $main-color;
+                @include flex-center;
+                width: 50%;
+                height: 60%;
+                align-items: map-get($map-flex, center);
+                margin: auto;
+                border-radius: 20px;
+                box-shadow: 10px 10px 10px rgb(0, 0, 0);
+            }
+
+            .main__divParrafo {
+                background-color: rgba(14, 13, 13, 0.231372549);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(1px);
+                padding: 50px;
+                text-align: $center;
+                font-size: 40px;
+                margin-top: 20px;
+                color: $main-color;
+
+                @include mobile-mediaqueries {
+                    font-size: 22px;
+                }
+            }
+
+            .main__divCentrar h1 {
+                display: $flex;
+                font-size: 3rem;
+                padding: 2rem;
+                align-items: map-get($map-flex, center);
+                justify-content: space-around;
+                text-decoration: underline;
+                color: $main-color;
+
+                @include mobile-mediaqueries {
+                    font-size: 20px;
+                }
+            }
+
+            .imagen {
+                border: 2px solid black;
+                text-align: $center;
+                background-color: $main-color;
+                justify-content: $center;
+
+                & img {
+                    width: 580px;
+                    height: 580px;
+                    padding: 1rem;
+                }
+            }
+
+            .main__divTexto {
+                color: $main-color;
+                width: 50%;
+                text-align: $center;
+                @include flex-center;
+                margin-left: 25%;
+                font-size: 2rem;
+
+                @include mobile-mediaqueries {
+                    font-size: 1rem;
+                }
+            }
+
+            .main__divModelos h2 {
+                color: $main-color;
+                text-align: $center;
+                font-size: 3rem;
+                text-decoration: underline;
+                margin-top: 2rem;
+
+                @include mobile-mediaqueries {
+                    font-size: 2rem;
+                }
+            }
+
+            .main__divContenedorModelos {
+                display: $flex;
+                flex-wrap: wrap;
+                justify-content: $center;
+                text-align: $center;
+                justify-content: space-around;
+                color: $main-color;
+                margin-bottom: 2rem;
+
+                & h4 {
+                    color: black;
+                }
+            }
+
+            .main__divContenedorModelosCard4 {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                background-color: rgba(255, 255, 255, 0.877);
+
+                @include mobile-mediaqueries {
+                    width: 90%;
+                }
+
+                & img {
+                    width: 35rem;
+                    height: 35rem;
+                    object-fit: cover;
+
+                    @include mobile-mediaqueries {
+                        width: 85%;
+                    }
+                }
+            }
+
+            .main__divContenedorModelosCard5 {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                background-color: rgba(255, 255, 255, 0.877);
+
+                @include mobile-mediaqueries {
+                    width: 90%;
+                }
+
+                & img {
+                    width: 35rem;
+                    height: 35rem;
+                    object-fit: cover;
+
+                    @include mobile-mediaqueries {
+                        width: 85%;
+                    }
+                }
+
+            }
+
+            .main__divContenedorModelosCard6 {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                background-color: rgba(255, 255, 255, 0.877);
+
+                @include mobile-mediaqueries {
+                    width: 90%;
+                }
+
+                & img {
+                    width: 35rem;
+                    height: 35rem;
+                    object-fit: cover;
+
+                    @include mobile-mediaqueries {
+                        width: 85%;
+                    }
+                }
+            }
+
+            .ubicacionImagen {
+                border-top: 1px solid black;
+                padding: 1rem 1rem 1rem 1rem;
+
+                & img {
+                    margin-right: 18rem;
+                    margin-left: 22rem;
+                    border: 1rem solid rgba(150, 7, 7, 0.356);
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+            .main__h1{
+                justify-content: center;
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                & h1{
+                    color: white;
+                }
+            }
+            .main__form {
+                width: 600px;
+                margin: 0 auto;
+                font-family: Arial, sans-serif;
+
+                @include mobile-mediaqueries {
+                    width: 30rem;
+                    display: $flex;
+                    flex-direction: column;
+                    justify-content: $center;
+                    align-items: map-get($map-flex, center);
+                }
+            }
+
+            label,
+            input,
+            textarea {
+                display: block;
+                margin-bottom: 10px;
+                color: $main-color;
+            }
+
+            input[type=text],
+            input[type=email] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                color: black;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                height: 150px;
+            }
+
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: $main-color;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            /*Acá empieza mis media queries del main */
+            .main__centrar__tituloPrincipal {
+                @include mobile-mediaqueries {
+                    font-size: 30px;
+                    text-align: $center;
+                }
+            }
+
+            .main__divContenedor__h2 {
+                @include mobile-mediaqueries {
+                    font-size: 20px;
+                    justify-content: $center;
+                    margin-left: 1.4rem;
+                }
+            }
+
+            .main__divContenedor {
+                @include mobile-mediaqueries {
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+            }
+
+            .main__divContenedor__iframe {
+                @include mobile-mediaqueries {
+                    width: 400px;
+                    height: 400px;
+                    margin-left: 3rem;
+                }
+            }
+
+            .contenedorCarrusel {
+                @include mobile-mediaqueries {
+                    width: 90%;
+                }
+            }
+
+            input[type=text],
+            input[type=email],
+            textarea {
+                @include mobile-mediaqueries {
+                    width: 84%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+            }
+
+            textarea {
+                @include mobile-mediaqueries {
+                    width: 84%;
+                    padding: 0px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    height: 150px;
+                }
+            }
+        }
     }
 }

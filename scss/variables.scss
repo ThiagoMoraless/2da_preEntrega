@@ -1,6 +1,8 @@
 /*Variables*/
 $font-family: "Raleway", sans-serif;
 $main-color:white;
+$flex: flex;
+$center: center;
 /*Mixin*/
 @mixin flex-center{
     display: flex;
@@ -13,4 +15,4 @@ $main-color:white;
 }
 $map-flex:(
     align-items: center
-)
+);

@@ -16,15 +16,14 @@
             margin: 0.5rem;
         }
         }
-}
-.navbar-toggler {
-    @include mobile-mediaqueries{
+    .navbar-toggler {
+        @include mobile-mediaqueries{
         margin-left: 2rem;
-    }
+        }
     &-icon{
         @include mobile-mediaqueries{
             color: $main-color
         }
     }
 }
-
+}
