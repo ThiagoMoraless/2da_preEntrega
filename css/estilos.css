@@ -422,7 +422,8 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .main__form {
-    width: 30rem;
+    align-items: center;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -458,6 +459,10 @@ textarea {
 }
 
 input[type=submit] {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100px;
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -543,8 +548,11 @@ input[type=submit]:hover {
   }
 }
 .footer {
-  height: auto;
+  height: 3rem;
   text-align: center;
+}
+.footer .div__footer {
+  margin-top: 1rem;
 }
 .footer .footer__icono {
   text-decoration: none;

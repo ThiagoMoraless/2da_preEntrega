@@ -11,8 +11,11 @@
   }
 }
 .footer {
-    height: auto;
+    height: 3rem;
     text-align: $center;
+    .div__footer{
+      margin-top: 1rem;
+    }
     .footer__icono {
       text-decoration: none;
       & .icon {

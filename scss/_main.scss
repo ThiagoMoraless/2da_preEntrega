@@ -365,7 +365,8 @@
     font-family: Arial, sans-serif;
 
     @include mobile-mediaqueries {
-        width: 30rem;
+        align-items: center;
+        width: auto;
         display: $flex;
         flex-direction: column;
         justify-content: $center;
@@ -402,6 +403,10 @@ textarea {
 }
 
 input[type=submit] {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100px;
     background-color: #4CAF50;
     color: $main-color;
     padding: 10px 20px;
