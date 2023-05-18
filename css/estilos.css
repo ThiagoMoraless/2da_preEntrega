@@ -58,6 +58,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 20% auto 15%;
 }
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .body__divGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .main__introduccion {
   background-color: rgba(14, 13, 13, 0.231372549);
@@ -144,51 +150,67 @@ body {
 .main__divContenedor {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 17%;
 }
-.main__divContenedor__h2 {
-  margin-left: 6rem;
+.main__divContenedor .main__divContenedor1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__divContenedor .main__divContenedor1__h2 {
   font-size: 2rem;
   text-decoration: underline;
   color: white;
-  white-space: nowrap;
 }
-.main__divContenedor__iframe {
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .main__divContenedor .main__divContenedor1__h2 {
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+.main__divContenedor .main__divContenedor1__iframe {
   margin-top: 2rem;
-  margin-left: 9rem;
+  justify-content: center;
   margin-bottom: 3rem;
   border: 2px solid white;
 }
-
-.main__div__h2Argentina {
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .main__divContenedor .main__divContenedor1__iframe {
+    width: 90%;
+  }
+}
+.main__divContenedor .main__div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__divContenedor .main__div .main__div__h2Argentina {
   text-decoration: underline;
-  margin-left: 33rem;
   font-size: 3rem;
   color: white;
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__div__h2Argentina {
+  .main__divContenedor .main__div .main__div__h2Argentina {
     font-size: 20px;
-    margin-left: 8rem;
+    justify-content: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 }
-
-.main__div__listaOrdenada {
+.main__divContenedor .main__div .main__div__listaOrdenada {
   font-family: "Oswald", sans-serif;
   text-decoration: none;
-  margin-top: 2rem;
-  font-size: 2.6rem;
+  margin-top: 3rem;
+  font-size: 2.3rem;
   list-style-type: none;
   justify-content: end;
-  margin-left: 22rem;
   color: white;
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__div__listaOrdenada {
+  .main__divContenedor .main__div .main__div__listaOrdenada {
     justify-content: center;
     font-size: 1.5rem;
-    margin-left: 1.5rem;
     margin-bottom: 2rem;
   }
 }
@@ -269,7 +291,7 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .main__divCentrar h1 {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
@@ -287,12 +309,16 @@ body {
 
 .main__divTexto {
   color: white;
-  width: 50%;
-  text-align: center;
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 25%;
+  align-items: center;
   font-size: 2rem;
+  margin: 0;
+}
+.main__divTexto .main__divTextoP {
+  width: 80%;
+  text-align: justify;
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .main__divTexto {
@@ -325,67 +351,25 @@ body {
 .main__divContenedorModelos h4 {
   color: black;
 }
-
-.main__divContenedorModelosCard4 {
+.main__divContenedorModelos .main__divContenedorModelosCard {
   margin-top: 2rem;
   font-size: 1.5rem;
   background-color: rgba(255, 255, 255, 0.877);
+  height: 100%;
+  width: 30%;
+}
+.main__divContenedorModelos .main__divContenedorModelosCard img {
+  height: 40rem;
+  width: 90%;
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard4 {
-    width: 90%;
+  .main__divContenedorModelos .main__divContenedorModelosCard {
+    width: 70%;
   }
-}
-.main__divContenedorModelosCard4 img {
-  width: 35rem;
-  height: 35rem;
-  object-fit: cover;
-}
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard4 img {
-    width: 85%;
-  }
-}
-
-.main__divContenedorModelosCard5 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.877);
-}
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard5 {
-    width: 90%;
-  }
-}
-.main__divContenedorModelosCard5 img {
-  width: 35rem;
-  height: 35rem;
-  object-fit: cover;
-}
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard5 img {
-    width: 85%;
-  }
-}
-
-.main__divContenedorModelosCard6 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.877);
-}
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard6 {
-    width: 90%;
-  }
-}
-.main__divContenedorModelosCard6 img {
-  width: 35rem;
-  height: 35rem;
-  object-fit: cover;
-}
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .main__divContenedorModelosCard6 img {
-    width: 85%;
+  .main__divContenedorModelos .main__divContenedorModelosCard img {
+    width: 80%;
+    height: 30rem;
+    object-fit: cover;
   }
 }
 
@@ -550,6 +534,11 @@ input[type=submit]:hover {
 .footer {
   height: 3rem;
   text-align: center;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .footer .footer__div {
+    margin-top: 8rem;
+  }
 }
 .footer .div__footer {
   margin-top: 1rem;

@@ -13,6 +13,11 @@
 .footer {
     height: 3rem;
     text-align: $center;
+    .footer__div{
+      @include mobile-mediaqueries{
+        margin-top: 8rem;
+      }
+    }
     .div__footer{
       margin-top: 1rem;
     }
